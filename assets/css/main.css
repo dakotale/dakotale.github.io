@@ -1466,6 +1466,24 @@
 		z-index: 3;
 	}
 
+	.resume-block, .project-block {
+		background: rgba(255,255,255,0.04);
+		border-radius: 12px;
+		padding: 18px 24px;
+		margin-bottom: 24px;
+		box-shadow: 0 2px 12px rgba(40,44,52,0.08);
+		transition: box-shadow 0.2s;
+	}
+	.resume-block:hover, .project-block:hover {
+		box-shadow: 0 4px 24px rgba(255,152,0,0.12);
+	}
+	.resume-block h4, .project-block h4 {
+		margin-bottom: 8px;
+	}
+	.resume-block ul, .project-block ul {
+		margin-bottom: 0;
+	}
+
 		#main article {
 			-moz-transform: translateY(0.25rem);
 			-webkit-transform: translateY(0.25rem);
