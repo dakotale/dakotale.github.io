@@ -325,11 +325,24 @@
 					switch (event.keyCode) {
 
 						case 27:
+							if ($body.hasClass('is-article-visible'))
+								$main._hide(true);
+							break;
 
-							// Article visible? Hide.
-								if ($body.hasClass('is-article-visible'))
-									$main._hide(true);
+						case 49: // 1 → About
+							location.hash = '#about';
+							break;
 
+						case 50: // 2 → Resume
+							location.hash = '#resume';
+							break;
+
+						case 51: // 3 → Projects
+							location.hash = '#projects';
+							break;
+
+						case 52: // 4 → Contact
+							location.hash = '#contact';
 							break;
 
 						default:
