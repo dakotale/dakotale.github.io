@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url("https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap");
 
 /*
 	Dimension by HTML5 UP
@@ -121,24 +121,26 @@
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
-		font-weight: 300;
+		font-family: "Share Tech Mono", "Courier New", monospace;
+		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.65;
 	}
 
 	a {
-		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+		border-bottom: dotted 1px rgba(204, 32, 32, 0.4);
 		text-decoration: none;
 		color: inherit;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
+			color: #cc2020;
+			text-shadow: 0 0 8px rgba(204, 32, 32, 0.5);
 		}
 
 	strong, b {
@@ -156,7 +158,8 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: 600;
+		font-family: "VT323", "Courier New", monospace;
+		font-weight: 400;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
@@ -169,13 +172,14 @@
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
+			border-bottom: solid 1px #cc2020;
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
+			text-shadow: 0 0 10px rgba(204, 32, 32, 0.6), 0 0 20px rgba(204, 32, 32, 0.3);
 		}
 
 	h1 {
@@ -264,8 +268,9 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #ffffff;
+		border-bottom: solid 1px #cc2020;
 		margin: 2.75rem 0;
+		box-shadow: 0 1px 6px rgba(204, 32, 32, 0.3);
 	}
 
 	.align-left {
@@ -364,8 +369,8 @@
 		-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background: transparent;
-		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border-radius: 0;
+		border: solid 1px #cc2020;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -555,8 +560,8 @@
 /* Box */
 
 	.box {
-		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border-radius: 0;
+		border: solid 1px #cc2020;
 		margin-bottom: 2rem;
 		padding: 1.5em;
 	}
@@ -597,7 +602,7 @@
 /* Image */
 
 	.image {
-		border-radius: 4px;
+		border-radius: 0;
 		border: 0;
 		display: inline-block;
 		position: relative;
@@ -610,7 +615,7 @@
 			pointer-events: none;
 			background-image: url("../../images/overlay.png");
 			background-color: rgba(19, 21, 25, 0.5);
-			border-radius: 4px;
+			border-radius: 0;
 			content: '';
 			display: block;
 			height: 100%;
@@ -622,7 +627,7 @@
 		}
 
 		.image img {
-			border-radius: 4px;
+			border-radius: 0;
 			display: block;
 		}
 
@@ -948,14 +953,14 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		background-color: transparent;
-		border-radius: 4px;
+		border-radius: 0;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #ffffff;
+		box-shadow: inset 0 0 0 1px #cc2020;
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
@@ -977,7 +982,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 255, 255, 0.075);
+			background-color: rgba(204, 32, 32, 0.1);
+			box-shadow: inset 0 0 0 1px #cc2020, 0 0 12px rgba(204, 32, 32, 0.4);
 		}
 
 		input[type="submit"]:active,
@@ -1212,7 +1218,8 @@
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: #cc2020;
+				box-shadow: 0 0 6px rgba(204, 32, 32, 0.5);
 			}
 
 		#header > :first-child {
@@ -1227,8 +1234,9 @@
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
-			border-radius: 100%;
+			border: solid 2px #cc2020;
+			border-radius: 0;
+			box-shadow: 0 0 12px rgba(204, 32, 32, 0.4);
 		}
 
 			#header .logo .icon:before {
@@ -1237,10 +1245,11 @@
 
 		#header .content {
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #cc2020;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
+			box-shadow: 0 0 20px rgba(204, 32, 32, 0.15);
 		}
 
 			#header .content .inner {
@@ -1276,13 +1285,16 @@
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
+			border: solid 1px #cc2020;
+			border-radius: 0;
+			box-shadow: 0 0 12px rgba(204, 32, 32, 0.3);
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(2px);
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #ffffff;
+				border-left: solid 1px #cc2020;
 			}
 
 				#header nav ul li:first-child {
@@ -1297,16 +1309,19 @@
 					padding: 0 1.25rem 0 1.45rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
+					font-size: 1rem;
+					font-family: "VT323", monospace;
 					border-bottom: 0;
 				}
 
 					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
+						background-color: rgba(204, 32, 32, 0.1);
+						color: #cc2020;
+						text-shadow: 0 0 8px rgba(204, 32, 32, 0.6);
 					}
 
 					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
+						background-color: rgba(204, 32, 32, 0.2);
 					}
 
 		#header nav.use-middle:after {
@@ -1467,15 +1482,17 @@
 	}
 
 	.resume-block, .project-block {
-		background: rgba(255,255,255,0.04);
-		border-radius: 12px;
+		background: rgba(204,32,32,0.03);
+		border-radius: 0;
+		border-left: 2px solid #cc2020;
 		padding: 18px 24px;
 		margin-bottom: 24px;
-		box-shadow: 0 2px 12px rgba(40,44,52,0.08);
-		transition: box-shadow 0.2s;
+		box-shadow: none;
+		transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
 	}
 	.resume-block:hover, .project-block:hover {
-		box-shadow: 0 4px 24px rgba(255,152,0,0.12);
+		background: rgba(204,32,32,0.06);
+		box-shadow: 0 0 16px rgba(204,32,32,0.1);
 	}
 	.resume-block h4, .project-block h4 {
 		margin-bottom: 8px;
@@ -1493,12 +1510,14 @@
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 4.5rem 2.5rem 1.5rem 2.5rem;
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
-			border-radius: 4px;
+			background-color: rgba(10, 12, 15, 0.92);
+			border-radius: 0;
+			border: 1px solid #cc2020;
+			box-shadow: 0 0 30px rgba(204, 32, 32, 0.2), inset 0 0 60px rgba(204, 32, 32, 0.02);
 			opacity: 0;
 		}
 
@@ -1610,3 +1629,217 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+
+/* =====================
+   RETRO THEME ADDITIONS
+   ===================== */
+
+/* Blinking cursor */
+@keyframes blink-caret {
+	0%, 49% { opacity: 1; }
+	50%, 100% { opacity: 0; }
+}
+
+.cursor {
+	display: inline-block;
+	animation: blink-caret 1s step-end infinite;
+	color: #cc2020;
+	font-weight: 400;
+}
+
+/* Retro terminal avatar */
+.retro-avatar {
+	width: 90px;
+	height: 90px;
+	border: 2px solid #cc2020;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "VT323", monospace;
+	font-size: 2.8rem;
+	color: #ffffff;
+	text-shadow: 0 0 10px rgba(204, 32, 32, 0.9), 0 0 20px rgba(204, 32, 32, 0.5);
+	box-shadow: 0 0 20px rgba(204, 32, 32, 0.4), inset 0 0 20px rgba(204, 32, 32, 0.08);
+	background: rgba(0, 0, 0, 0.5);
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.retro-avatar::before {
+	content: '';
+	position: absolute;
+	top: -6px; left: -6px; right: -6px; bottom: -6px;
+	border: 1px solid rgba(204, 32, 32, 0.25);
+	pointer-events: none;
+}
+
+/* CRT scanline effect on article panels */
+#main article::after {
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 3px,
+		rgba(0, 0, 0, 0.04) 3px,
+		rgba(0, 0, 0, 0.04) 4px
+	);
+	pointer-events: none;
+	z-index: 100;
+}
+
+/* Terminal prompt prefix on major headings */
+h2.major::before {
+	content: '> ';
+	color: #cc2020;
+	opacity: 0.7;
+}
+
+/* Retro section title styling */
+.section-title {
+	font-family: "VT323", monospace;
+	color: #cc2020 !important;
+	border-bottom: 1px dashed rgba(204, 32, 32, 0.4);
+	padding-bottom: 4px;
+	margin-bottom: 12px !important;
+	letter-spacing: 0.15rem;
+}
+
+/* Retro bold */
+.bold {
+	font-family: "VT323", monospace;
+	font-size: 1.1em;
+	letter-spacing: 0.05rem;
+}
+
+/* Orange accent for ul bullets */
+#main ul li::marker {
+	color: #cc2020;
+}
+
+/* Footer retro style */
+#footer .copyright {
+	font-family: "Share Tech Mono", monospace;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* Nav middle line orange */
+#header nav.use-middle:after {
+	background: #cc2020;
+}
+
+/* Mobile nav border */
+@media screen and (max-width: 480px) {
+	#header nav ul li {
+		border-top: solid 1px #cc2020;
+	}
+}
+
+/* ul.alt orange separators */
+ul.alt li {
+	border-top-color: rgba(204, 32, 32, 0.3) !important;
+}
+
+/* Retro icons */
+ul.icons li a {
+	border-radius: 0 !important;
+	box-shadow: inset 0 0 0 1px #cc2020 !important;
+	transition: background-color 0.2s, box-shadow 0.2s, text-shadow 0.2s !important;
+}
+
+ul.icons li a:hover {
+	background-color: rgba(204, 32, 32, 0.1) !important;
+	box-shadow: inset 0 0 0 1px #cc2020, 0 0 12px rgba(204, 32, 32, 0.4) !important;
+}
+
+/* Retro about-block */
+.about-block {
+	background: rgba(204, 32, 32, 0.03) !important;
+	border-radius: 0 !important;
+	border-left: 2px solid #cc2020;
+}
+
+/* Header content inner: remove rounded corners */
+#header .content {
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+/* ── Nav key hints ── */
+.nav-key {
+	font-family: "Share Tech Mono", monospace;
+	font-size: 0.75em;
+	color: #cc2020;
+	opacity: 0.7;
+	margin-right: 3px;
+	letter-spacing: 0;
+}
+
+/* ── Ticker strip — fixed status bar at bottom ── */
+.ticker-wrap {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	border-top: 1px solid rgba(204, 32, 32, 0.5);
+	padding: 7px 0;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(4px);
+	white-space: nowrap;
+	z-index: 9990;
+}
+
+.ticker {
+	display: inline-block;
+	font-family: "Share Tech Mono", monospace;
+	font-size: 0.65rem;
+	color: rgba(255, 255, 255, 0.9);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-sep {
+	margin: 0 1.2em;
+	color: rgba(204, 32, 32, 0.6);
+}
+
+@keyframes ticker-scroll {
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+/* ── Global CRT vignette on the page ── */
+body::before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.55) 100%);
+	pointer-events: none;
+	z-index: 9999;
+}
+
+/* ── Global page scanlines (subtle, body-level) ── */
+body::after {
+	content: '';
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 0, 0, 0.04) 2px,
+		rgba(0, 0, 0, 0.04) 4px
+	);
+	pointer-events: none;
+	z-index: 9998;
+}
+
+/* ── Keyboard shortcut activation glow on nav ── */
+#header nav ul li a.active-key {
+	background-color: rgba(204, 32, 32, 0.2);
+	color: #cc2020;
+}
