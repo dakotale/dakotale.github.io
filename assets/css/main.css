@@ -1846,374 +1846,235 @@ body::after {
 
 /* ── RESUME V2 ── */
 
-#main article#resume {
-	width: 50rem;
-}
-
-.rv-eyebrow {
-	font-family: 'VT323', monospace;
-	font-size: 0.65rem;
-	color: #cc2020;
-	letter-spacing: 3px;
-	margin-bottom: 10px;
-}
-
+/* Contact chips row */
 .rv-contact {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 14px;
-	margin-bottom: 18px;
-}
-
-.rv-chip {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	font-size: 0.65rem;
-	color: rgba(200, 208, 220, 0.7);
-	font-family: 'Share Tech Mono', monospace;
+	gap: 6px 20px;
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.6);
+	letter-spacing: 0.05rem;
 }
 
 .rv-chip .rv-label {
 	color: #cc2020;
-	font-size: 0.55rem;
-	letter-spacing: 1px;
+	margin-right: 4px;
+	letter-spacing: 0.1rem;
 }
 
 .rv-chip a {
-	color: rgba(200, 208, 220, 0.7);
+	color: rgba(255,255,255,0.75);
 	text-decoration: none;
 }
 
-.rv-chip a:hover {
-	color: #cc2020;
-}
+.rv-chip a:hover { color: #cc2020; }
 
+/* Download button */
 .rv-dl-btn {
 	display: inline-block;
 	font-family: 'VT323', monospace;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	letter-spacing: 2px;
 	color: #080c10;
 	background: #cc2020;
-	padding: 6px 22px;
+	padding: 6px 24px;
 	text-decoration: none;
-	clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 	transition: background 0.15s, color 0.15s;
-	margin-bottom: 28px;
+	margin: 0.5rem 0 1.5rem;
 }
 
 .rv-dl-btn:hover {
-	background: #e8eef8;
+	background: #ffffff;
 	color: #080c10;
 }
 
+/* "LOADING PROFILE" prompt */
 .rv-prompt {
 	color: #cc2020;
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.6rem;
-	letter-spacing: 1px;
-	margin-bottom: 8px;
+	font-size: 0.75rem;
+	letter-spacing: 0.15rem;
+	margin-bottom: 0.4rem;
 }
 
+/* Summary block — matches the about-block left-border style */
 .rv-summary {
-	font-size: 0.75rem;
-	color: rgba(200, 208, 220, 0.85);
-	line-height: 1.7;
 	border-left: 2px solid #cc2020;
-	padding-left: 14px;
-	margin-bottom: 32px;
+	padding: 10px 16px;
+	margin-bottom: 1.5rem;
+	line-height: 1.7;
+	color: rgba(255,255,255,0.85);
+}
+
+/* Section headers — matches .section-title */
+.rv-sec-hdr {
+	font-family: 'VT323', monospace;
+	color: #cc2020 !important;
+	border-bottom: 1px dashed rgba(204,32,32,0.4);
+	padding-bottom: 4px;
+	margin-bottom: 1rem !important;
+	letter-spacing: 0.15rem;
+	font-size: 1.15rem;
 }
 
 .rv-section {
-	margin-bottom: 36px;
+	margin-bottom: 1.5rem;
 }
 
-.rv-sec-hdr {
-	font-family: 'VT323', monospace;
-	font-size: 0.75rem;
-	letter-spacing: 3px;
-	color: #cc2020;
-	margin-bottom: 18px;
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.rv-sec-hdr::after {
-	content: '';
-	flex: 1;
-	height: 1px;
-	background: linear-gradient(90deg, rgba(153, 26, 51, 0.7), transparent);
-}
-
-.rv-job {
-	border-left: 2px solid rgba(26, 32, 48, 0.9);
-	padding-left: 18px;
-	margin-bottom: 24px;
-	position: relative;
-}
-
-.rv-job::before {
-	content: '▶';
-	position: absolute;
-	left: -9px;
-	top: 3px;
-	font-size: 0.5rem;
-	color: #cc2020;
-	background: rgba(10, 12, 15, 0.92);
-	line-height: 1;
-}
-
+/* Job entries — each wrapped in .resume-block via HTML */
 .rv-job-title {
 	font-family: 'VT323', monospace;
-	font-size: 1.15rem;
-	color: #e8eef8;
-	letter-spacing: 1px;
-	line-height: 1.2;
+	font-size: 1.1em;
+	color: #cc2020;
+	letter-spacing: 0.05rem;
+	margin-bottom: 2px;
 }
 
 .rv-job-meta {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.55rem;
-	color: #cc2020;
-	letter-spacing: 1px;
-	margin-bottom: 10px;
-	line-height: 1.5;
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.5);
+	margin-bottom: 0.6rem;
+	letter-spacing: 0.05rem;
 }
 
-.rv-job-meta .rv-sep {
-	color: rgba(74, 85, 104, 0.7);
-	margin: 0 5px;
-}
+.rv-job-meta .rv-sep { margin: 0 6px; color: rgba(204,32,32,0.5); }
+.rv-job-meta .rv-loc { color: rgba(255,255,255,0.4); }
 
-.rv-job-meta .rv-loc {
-	color: rgba(74, 85, 104, 0.8);
-}
-
-.rv-job ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.rv-job ul li {
-	padding-left: 18px;
-	position: relative;
-	margin-bottom: 5px;
-	color: rgba(200, 208, 220, 0.85);
-	font-size: 0.72rem;
-	line-height: 1.55;
-}
-
-.rv-job ul li::before {
-	content: '//';
-	position: absolute;
-	left: 0;
-	color: rgba(153, 26, 51, 0.7);
-	font-size: 0.55rem;
-	top: 3px;
-}
-
-.rv-project {
-	background: rgba(13, 17, 23, 0.6);
-	border: 1px solid rgba(26, 32, 48, 0.9);
-	border-top: 2px solid rgba(153, 26, 51, 0.7);
-	padding: 14px 16px;
-	margin-bottom: 14px;
-	position: relative;
-	transition: border-color 0.2s;
-}
-
-.rv-project:hover {
-	border-top-color: #cc2020;
-	border-color: rgba(153, 26, 51, 0.6);
-}
-
+/* Project cards — each wrapped in .resume-block via HTML */
 .rv-project-name {
 	font-family: 'VT323', monospace;
-	font-size: 1.05rem;
-	color: #e8eef8;
-	letter-spacing: 1px;
-	line-height: 1.2;
+	font-size: 1.1em;
+	color: #cc2020;
+	letter-spacing: 0.05rem;
+	margin-bottom: 2px;
 }
 
 .rv-project-stack {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: #cc2020;
-	letter-spacing: 1.5px;
-	margin: 3px 0 8px;
+	font-size: 0.75rem;
+	color: rgba(255,255,255,0.45);
+	letter-spacing: 0.1rem;
+	margin-bottom: 0.5rem;
 }
 
-.rv-project p {
-	font-size: 0.7rem;
-	color: rgba(200, 208, 220, 0.85);
-	line-height: 1.55;
-	margin: 0;
+.rv-project-dates {
+	float: right;
+	font-size: 0.75rem;
+	color: rgba(255,255,255,0.35);
+	font-style: italic;
+	margin-left: 12px;
 }
 
 .rv-project-url {
 	display: inline-block;
-	margin-top: 8px;
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.55rem;
-	color: #00ffcc;
-	text-decoration: none;
-	letter-spacing: 0.5px;
-}
-
-.rv-project-url:hover {
-	color: #e8eef8;
-}
-
-.rv-project-dates {
-	position: absolute;
-	top: 10px;
-	right: 12px;
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: rgba(74, 85, 104, 0.8);
-	font-style: italic;
-}
-
-.rv-sidebar-block {
-	background: rgba(13, 17, 23, 0.5);
-	border: 1px solid rgba(26, 32, 48, 0.9);
-	padding: 16px 18px;
-	margin-bottom: 20px;
-}
-
-.rv-sidebar-title {
-	font-family: 'VT323', monospace;
-	font-size: 0.72rem;
-	letter-spacing: 3px;
+	margin-top: 6px;
+	font-size: 0.8rem;
 	color: #cc2020;
-	margin-bottom: 14px;
+	text-decoration: none;
+}
+
+.rv-project-url:hover { color: #ffffff; }
+
+/* Skills tags */
+.rv-tags {
 	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.rv-sidebar-title::after {
-	content: '';
-	flex: 1;
-	height: 1px;
-	background: rgba(26, 32, 48, 0.9);
-}
-
-.rv-skill-cat {
-	margin-bottom: 12px;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 0.75rem;
 }
 
 .rv-skill-cat-name {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: rgba(74, 85, 104, 0.8);
-	letter-spacing: 2px;
+	font-size: 0.75rem;
+	color: rgba(255,255,255,0.4);
+	letter-spacing: 0.15rem;
 	text-transform: uppercase;
 	margin-bottom: 6px;
 }
 
-.rv-tags {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 4px;
-}
-
 .rv-tag {
 	font-family: 'VT323', monospace;
-	font-size: 0.78rem;
+	font-size: 1rem;
+	padding: 0 10px;
+	border: 1px solid rgba(204,32,32,0.25);
+	color: rgba(255,255,255,0.7);
+	line-height: 1.6;
 	letter-spacing: 0.5px;
-	padding: 1px 8px;
-	border: 1px solid rgba(26, 32, 48, 0.9);
-	color: rgba(200, 208, 220, 0.85);
-	background: rgba(8, 12, 16, 0.7);
-	line-height: 1.4;
 }
 
 .rv-tag.hot {
-	border-color: rgba(153, 26, 51, 0.7);
+	border-color: #cc2020;
 	color: #cc2020;
 }
 
+/* Education items */
 .rv-edu-item {
-	margin-bottom: 14px;
+	margin-bottom: 0.9rem;
 }
 
 .rv-edu-degree {
 	font-family: 'VT323', monospace;
-	font-size: 0.9rem;
-	color: #e8eef8;
-	line-height: 1.2;
+	font-size: 1.1em;
+	color: #cc2020;
+	letter-spacing: 0.05rem;
 }
 
 .rv-edu-school {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.55rem;
-	color: #cc2020;
-	margin: 3px 0 2px;
+	color: rgba(255,255,255,0.75);
+	font-size: 0.85rem;
+	margin: 2px 0 1px;
 }
 
 .rv-edu-dates {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: rgba(74, 85, 104, 0.8);
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.4);
 	font-style: italic;
 }
 
+/* Volunteer items */
 .rv-vol-item {
-	margin-bottom: 12px;
-	padding-left: 12px;
-	border-left: 2px solid rgba(26, 32, 48, 0.9);
+	margin-bottom: 0.75rem;
 }
 
 .rv-vol-role {
 	font-family: 'VT323', monospace;
-	font-size: 0.9rem;
-	color: #e8eef8;
-	line-height: 1.2;
+	font-size: 1.1em;
+	color: #cc2020;
+	letter-spacing: 0.05rem;
 }
 
 .rv-vol-org {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.55rem;
-	color: #cc2020;
-	margin: 2px 0;
+	color: rgba(255,255,255,0.75);
+	font-size: 0.85rem;
+	margin: 2px 0 1px;
 }
 
 .rv-vol-dates {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: rgba(74, 85, 104, 0.8);
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.4);
 	font-style: italic;
 }
 
+/* Honor/award items */
 .rv-award {
 	display: flex;
 	gap: 8px;
-	align-items: flex-start;
-	margin-bottom: 8px;
+	align-items: baseline;
+	margin-bottom: 0.5rem;
 }
 
 .rv-award::before {
 	content: '★';
-	color: #ffd60a;
+	color: #cc2020;
 	flex-shrink: 0;
-	font-size: 0.7rem;
-	line-height: 1.4;
 }
 
 .rv-award-name {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.6rem;
-	color: rgba(200, 208, 220, 0.85);
+	color: rgba(255,255,255,0.85);
 	line-height: 1.4;
 }
 
 .rv-award-date {
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 0.5rem;
-	color: rgba(74, 85, 104, 0.8);
-	margin-top: 2px;
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.4);
+	white-space: nowrap;
 }
