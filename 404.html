@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>404 &mdash; Signal Lost</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" />
+		<style>
+			html, body { margin: 0; height: 100%; }
+			body {
+				background: #0a0a0a;
+				color: rgba(255,255,255,0.85);
+				font-family: "Share Tech Mono", "Courier New", monospace;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 2rem;
+				background-image:
+					radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.6) 100%),
+					repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.35) 2px, rgba(0,0,0,0.35) 4px);
+			}
+			.box { max-width: 30rem; }
+			h1 {
+				font-family: "VT323", monospace;
+				font-size: 6rem;
+				margin: 0;
+				color: #fff;
+				text-shadow: 0 0 16px rgba(204,32,32,0.9), 0 0 32px rgba(204,32,32,0.4);
+				letter-spacing: 0.1em;
+			}
+			p { letter-spacing: 0.15em; line-height: 1.7; }
+			.dim { color: rgba(255,255,255,0.5); }
+			a {
+				display: inline-block;
+				margin-top: 1.5rem;
+				padding: 0.5rem 1.5rem;
+				color: #0a0a0a;
+				background: #cc2020;
+				text-decoration: none;
+				font-family: "VT323", monospace;
+				font-size: 1.3rem;
+				letter-spacing: 2px;
+				clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+			}
+			a:hover { background: #fff; }
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1>404</h1>
+			<p>&gt; SIGNAL LOST<br><span class="dim">The page you requested is not on this server.</span></p>
+			<a href="/">&#8592; RETURN HOME</a>
+		</div>
+	</body>
+</html>

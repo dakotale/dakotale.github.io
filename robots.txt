@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dakotale.github.io/sitemap.xml
