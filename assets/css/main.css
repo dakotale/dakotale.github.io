@@ -1,11 +1,22 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap");
+/* VT323 + Share Tech Mono are loaded via <link> in index.html <head> for faster, non-render-blocking delivery. */
 
 /*
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+/* ===============================================================
+   THEME TOKENS
+   --red      : primary synthwave accent (AA-contrast on the dark
+                panels — was #cc2020 / 3.2:1, now #e5484d / ~4.6:1)
+   --red-rgb  : same colour as bare channels for rgba() glows
+   =============================================================== */
+	:root {
+		--red: #e5484d;
+		--red-rgb: 229, 72, 77;
+	}
 
 /* Reset */
 
@@ -132,15 +143,15 @@
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(204, 32, 32, 0.4);
+		border-bottom: dotted 1px rgba(var(--red-rgb), 0.4);
 		text-decoration: none;
 		color: inherit;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #cc2020;
-			text-shadow: 0 0 8px rgba(204, 32, 32, 0.5);
+			color: var(--red);
+			text-shadow: 0 0 8px rgba(var(--red-rgb), 0.5);
 		}
 
 	strong, b {
@@ -172,14 +183,14 @@
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #cc2020;
+			border-bottom: solid 1px var(--red);
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
-			text-shadow: 0 0 10px rgba(204, 32, 32, 0.6), 0 0 20px rgba(204, 32, 32, 0.3);
+			text-shadow: 0 0 10px rgba(var(--red-rgb), 0.6), 0 0 20px rgba(var(--red-rgb), 0.3);
 		}
 
 	h1 {
@@ -268,9 +279,9 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #cc2020;
+		border-bottom: solid 1px var(--red);
 		margin: 2.75rem 0;
-		box-shadow: 0 1px 6px rgba(204, 32, 32, 0.3);
+		box-shadow: 0 1px 6px rgba(var(--red-rgb), 0.3);
 	}
 
 	.align-left {
@@ -370,7 +381,7 @@
 		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background: transparent;
 		border-radius: 0;
-		border: solid 1px #cc2020;
+		border: solid 1px var(--red);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -561,7 +572,7 @@
 
 	.box {
 		border-radius: 0;
-		border: solid 1px #cc2020;
+		border: solid 1px var(--red);
 		margin-bottom: 2rem;
 		padding: 1.5em;
 	}
@@ -613,7 +624,7 @@
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
 			pointer-events: none;
-			background-image: url("../../images/overlay.png");
+			background-image: url("../images/overlay.png");
 			background-color: rgba(19, 21, 25, 0.5);
 			border-radius: 0;
 			content: '';
@@ -629,6 +640,7 @@
 		.image img {
 			border-radius: 0;
 			display: block;
+			height: auto;
 		}
 
 		.image.left, .image.right {
@@ -960,7 +972,7 @@
 		background-color: transparent;
 		border-radius: 0;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #cc2020;
+		box-shadow: inset 0 0 0 1px var(--red);
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
@@ -982,8 +994,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(204, 32, 32, 0.1);
-			box-shadow: inset 0 0 0 1px #cc2020, 0 0 12px rgba(204, 32, 32, 0.4);
+			background-color: rgba(var(--red-rgb), 0.1);
+			box-shadow: inset 0 0 0 1px var(--red), 0 0 12px rgba(var(--red-rgb), 0.4);
 		}
 
 		input[type="submit"]:active,
@@ -1081,7 +1093,7 @@
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../assets/images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../images/overlay.png");
 			background-size: auto, 256px 256px;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
@@ -1218,8 +1230,8 @@
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #cc2020;
-				box-shadow: 0 0 6px rgba(204, 32, 32, 0.5);
+				background: var(--red);
+				box-shadow: 0 0 6px rgba(var(--red-rgb), 0.5);
 			}
 
 		#header > :first-child {
@@ -1234,9 +1246,9 @@
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 2px #cc2020;
+			border: solid 2px var(--red);
 			border-radius: 0;
-			box-shadow: 0 0 12px rgba(204, 32, 32, 0.4);
+			box-shadow: 0 0 12px rgba(var(--red-rgb), 0.4);
 		}
 
 			#header .logo .icon:before {
@@ -1245,11 +1257,11 @@
 
 		#header .content {
 			border-style: solid;
-			border-color: #cc2020;
+			border-color: var(--red);
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
-			box-shadow: 0 0 20px rgba(204, 32, 32, 0.15);
+			box-shadow: 0 0 20px rgba(var(--red-rgb), 0.15);
 		}
 
 			#header .content .inner {
@@ -1285,16 +1297,16 @@
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #cc2020;
+			border: solid 1px var(--red);
 			border-radius: 0;
-			box-shadow: 0 0 12px rgba(204, 32, 32, 0.3);
+			box-shadow: 0 0 12px rgba(var(--red-rgb), 0.3);
 			background: rgba(0, 0, 0, 0.5);
 			backdrop-filter: blur(2px);
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #cc2020;
+				border-left: solid 1px var(--red);
 			}
 
 				#header nav ul li:first-child {
@@ -1315,13 +1327,13 @@
 				}
 
 					#header nav ul li a:hover {
-						background-color: rgba(204, 32, 32, 0.1);
-						color: #cc2020;
-						text-shadow: 0 0 8px rgba(204, 32, 32, 0.6);
+						background-color: rgba(var(--red-rgb), 0.1);
+						color: var(--red);
+						text-shadow: 0 0 8px rgba(var(--red-rgb), 0.6);
 					}
 
 					#header nav ul li a:active {
-						background-color: rgba(204, 32, 32, 0.2);
+						background-color: rgba(var(--red-rgb), 0.2);
 					}
 
 		#header nav.use-middle:after {
@@ -1482,17 +1494,17 @@
 	}
 
 	.resume-block, .project-block {
-		background: rgba(204,32,32,0.03);
+		background: rgba(var(--red-rgb),0.03);
 		border-radius: 0;
-		border-left: 2px solid #cc2020;
+		border-left: 2px solid var(--red);
 		padding: 18px 24px;
 		margin-bottom: 24px;
 		box-shadow: none;
 		transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
 	}
 	.resume-block:hover, .project-block:hover {
-		background: rgba(204,32,32,0.06);
-		box-shadow: 0 0 16px rgba(204,32,32,0.1);
+		background: rgba(var(--red-rgb),0.06);
+		box-shadow: 0 0 16px rgba(var(--red-rgb),0.1);
 	}
 	.resume-block h4, .project-block h4 {
 		margin-bottom: 8px;
@@ -1516,8 +1528,8 @@
 			max-width: 100%;
 			background-color: rgba(10, 12, 15, 0.92);
 			border-radius: 0;
-			border: 1px solid #cc2020;
-			box-shadow: 0 0 30px rgba(204, 32, 32, 0.2), inset 0 0 60px rgba(204, 32, 32, 0.02);
+			border: 1px solid var(--red);
+			box-shadow: 0 0 30px rgba(var(--red-rgb), 0.2), inset 0 0 60px rgba(var(--red-rgb), 0.02);
 			opacity: 0;
 		}
 
@@ -1643,7 +1655,7 @@
 .cursor {
 	display: inline-block;
 	animation: blink-caret 1s step-end infinite;
-	color: #cc2020;
+	color: var(--red);
 	font-weight: 400;
 }
 
@@ -1651,15 +1663,15 @@
 .retro-avatar {
 	width: 90px;
 	height: 90px;
-	border: 2px solid #cc2020;
+	border: 2px solid var(--red);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	font-family: "VT323", monospace;
 	font-size: 2.8rem;
 	color: #ffffff;
-	text-shadow: 0 0 10px rgba(204, 32, 32, 0.9), 0 0 20px rgba(204, 32, 32, 0.5);
-	box-shadow: 0 0 20px rgba(204, 32, 32, 0.4), inset 0 0 20px rgba(204, 32, 32, 0.08);
+	text-shadow: 0 0 10px rgba(var(--red-rgb), 0.9), 0 0 20px rgba(var(--red-rgb), 0.5);
+	box-shadow: 0 0 20px rgba(var(--red-rgb), 0.4), inset 0 0 20px rgba(var(--red-rgb), 0.08);
 	background: rgba(0, 0, 0, 0.5);
 	margin-bottom: 16px;
 	position: relative;
@@ -1669,7 +1681,7 @@
 	content: '';
 	position: absolute;
 	top: -6px; left: -6px; right: -6px; bottom: -6px;
-	border: 1px solid rgba(204, 32, 32, 0.25);
+	border: 1px solid rgba(var(--red-rgb), 0.25);
 	pointer-events: none;
 }
 
@@ -1692,15 +1704,15 @@
 /* Terminal prompt prefix on major headings */
 h2.major::before {
 	content: '> ';
-	color: #cc2020;
+	color: var(--red);
 	opacity: 0.7;
 }
 
 /* Retro section title styling */
 .section-title {
 	font-family: "VT323", monospace;
-	color: #cc2020 !important;
-	border-bottom: 1px dashed rgba(204, 32, 32, 0.4);
+	color: var(--red) !important;
+	border-bottom: 1px dashed rgba(var(--red-rgb), 0.4);
 	padding-bottom: 4px;
 	margin-bottom: 12px !important;
 	letter-spacing: 0.15rem;
@@ -1715,7 +1727,7 @@ h2.major::before {
 
 /* Orange accent for ul bullets */
 #main ul li::marker {
-	color: #cc2020;
+	color: var(--red);
 }
 
 /* Footer retro style */
@@ -1726,38 +1738,38 @@ h2.major::before {
 
 /* Nav middle line orange */
 #header nav.use-middle:after {
-	background: #cc2020;
+	background: var(--red);
 }
 
 /* Mobile nav border */
 @media screen and (max-width: 480px) {
 	#header nav ul li {
-		border-top: solid 1px #cc2020;
+		border-top: solid 1px var(--red);
 	}
 }
 
 /* ul.alt orange separators */
 ul.alt li {
-	border-top-color: rgba(204, 32, 32, 0.3) !important;
+	border-top-color: rgba(var(--red-rgb), 0.3) !important;
 }
 
 /* Retro icons */
 ul.icons li a {
 	border-radius: 0 !important;
-	box-shadow: inset 0 0 0 1px #cc2020 !important;
+	box-shadow: inset 0 0 0 1px var(--red) !important;
 	transition: background-color 0.2s, box-shadow 0.2s, text-shadow 0.2s !important;
 }
 
 ul.icons li a:hover {
-	background-color: rgba(204, 32, 32, 0.1) !important;
-	box-shadow: inset 0 0 0 1px #cc2020, 0 0 12px rgba(204, 32, 32, 0.4) !important;
+	background-color: rgba(var(--red-rgb), 0.1) !important;
+	box-shadow: inset 0 0 0 1px var(--red), 0 0 12px rgba(var(--red-rgb), 0.4) !important;
 }
 
 /* Retro about-block */
 .about-block {
-	background: rgba(204, 32, 32, 0.03) !important;
+	background: rgba(var(--red-rgb), 0.03) !important;
 	border-radius: 0 !important;
-	border-left: 2px solid #cc2020;
+	border-left: 2px solid var(--red);
 }
 
 /* Header content inner: remove rounded corners */
@@ -1770,7 +1782,7 @@ ul.icons li a:hover {
 .nav-key {
 	font-family: "Share Tech Mono", monospace;
 	font-size: 0.75em;
-	color: #cc2020;
+	color: var(--red);
 	opacity: 0.7;
 	margin-right: 3px;
 	letter-spacing: 0;
@@ -1783,7 +1795,7 @@ ul.icons li a:hover {
 	left: 0;
 	right: 0;
 	overflow: hidden;
-	border-top: 1px solid rgba(204, 32, 32, 0.5);
+	border-top: 1px solid rgba(var(--red-rgb), 0.5);
 	padding: 7px 0;
 	background: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(4px);
@@ -1803,7 +1815,7 @@ ul.icons li a:hover {
 
 .ticker-sep {
 	margin: 0 1.2em;
-	color: rgba(204, 32, 32, 0.6);
+	color: rgba(var(--red-rgb), 0.6);
 }
 
 @keyframes ticker-scroll {
@@ -1840,8 +1852,8 @@ body::after {
 
 /* ── Keyboard shortcut activation glow on nav ── */
 #header nav ul li a.active-key {
-	background-color: rgba(204, 32, 32, 0.2);
-	color: #cc2020;
+	background-color: rgba(var(--red-rgb), 0.2);
+	color: var(--red);
 }
 
 /* ── RESUME V2 ── */
@@ -1858,7 +1870,7 @@ body::after {
 }
 
 .rv-chip .rv-label {
-	color: #cc2020;
+	color: var(--red);
 	margin-right: 4px;
 	letter-spacing: 0.1rem;
 }
@@ -1868,7 +1880,7 @@ body::after {
 	text-decoration: none;
 }
 
-.rv-chip a:hover { color: #cc2020; }
+.rv-chip a:hover { color: var(--red); }
 
 /* Download button */
 .rv-dl-btn {
@@ -1877,7 +1889,7 @@ body::after {
 	font-size: 1.1rem;
 	letter-spacing: 2px;
 	color: #080c10;
-	background: #cc2020;
+	background: var(--red);
 	padding: 6px 24px;
 	text-decoration: none;
 	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
@@ -1892,7 +1904,7 @@ body::after {
 
 /* "LOADING PROFILE" prompt */
 .rv-prompt {
-	color: #cc2020;
+	color: var(--red);
 	font-size: 0.75rem;
 	letter-spacing: 0.15rem;
 	margin-bottom: 0.4rem;
@@ -1900,7 +1912,7 @@ body::after {
 
 /* Summary block — matches the about-block left-border style */
 .rv-summary {
-	border-left: 2px solid #cc2020;
+	border-left: 2px solid var(--red);
 	padding: 10px 16px;
 	margin-bottom: 1.5rem;
 	line-height: 1.7;
@@ -1910,8 +1922,8 @@ body::after {
 /* Section headers — matches .section-title */
 .rv-sec-hdr {
 	font-family: 'VT323', monospace;
-	color: #cc2020 !important;
-	border-bottom: 1px dashed rgba(204,32,32,0.4);
+	color: var(--red) !important;
+	border-bottom: 1px dashed rgba(var(--red-rgb),0.4);
 	padding-bottom: 4px;
 	margin-bottom: 1rem !important;
 	letter-spacing: 0.15rem;
@@ -1926,7 +1938,7 @@ body::after {
 .rv-job-title {
 	font-family: 'VT323', monospace;
 	font-size: 1.1em;
-	color: #cc2020;
+	color: var(--red);
 	letter-spacing: 0.05rem;
 	margin-bottom: 2px;
 }
@@ -1938,14 +1950,14 @@ body::after {
 	letter-spacing: 0.05rem;
 }
 
-.rv-job-meta .rv-sep { margin: 0 6px; color: rgba(204,32,32,0.5); }
+.rv-job-meta .rv-sep { margin: 0 6px; color: rgba(var(--red-rgb),0.5); }
 .rv-job-meta .rv-loc { color: rgba(255,255,255,0.4); }
 
 /* Project cards — each wrapped in .resume-block via HTML */
 .rv-project-name {
 	font-family: 'VT323', monospace;
 	font-size: 1.1em;
-	color: #cc2020;
+	color: var(--red);
 	letter-spacing: 0.05rem;
 	margin-bottom: 2px;
 }
@@ -1969,7 +1981,7 @@ body::after {
 	display: inline-block;
 	margin-top: 6px;
 	font-size: 0.8rem;
-	color: #cc2020;
+	color: var(--red);
 	text-decoration: none;
 }
 
@@ -1995,15 +2007,15 @@ body::after {
 	font-family: 'VT323', monospace;
 	font-size: 1rem;
 	padding: 0 10px;
-	border: 1px solid rgba(204,32,32,0.25);
+	border: 1px solid rgba(var(--red-rgb),0.25);
 	color: rgba(255,255,255,0.7);
 	line-height: 1.6;
 	letter-spacing: 0.5px;
 }
 
 .rv-tag.hot {
-	border-color: #cc2020;
-	color: #cc2020;
+	border-color: var(--red);
+	color: var(--red);
 }
 
 /* Education items */
@@ -2014,7 +2026,7 @@ body::after {
 .rv-edu-degree {
 	font-family: 'VT323', monospace;
 	font-size: 1.1em;
-	color: #cc2020;
+	color: var(--red);
 	letter-spacing: 0.05rem;
 }
 
@@ -2038,7 +2050,7 @@ body::after {
 .rv-vol-role {
 	font-family: 'VT323', monospace;
 	font-size: 1.1em;
-	color: #cc2020;
+	color: var(--red);
 	letter-spacing: 0.05rem;
 }
 
@@ -2064,7 +2076,7 @@ body::after {
 
 .rv-award::before {
 	content: '★';
-	color: #cc2020;
+	color: var(--red);
 	flex-shrink: 0;
 }
 
@@ -2078,3 +2090,129 @@ body::after {
 	color: rgba(255,255,255,0.4);
 	white-space: nowrap;
 }
+
+/* ── Respect reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+
+	*, *::before, *::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+
+	/* Keep the terminal cursor and ticker readable when animation is stopped */
+	.cursor { opacity: 1; }
+	.ticker { animation: none; transform: none; }
+
+}
+
+/* ===============================================================
+   PAGE STYLES  (moved out of inline style="" attributes in index.html)
+   =============================================================== */
+
+/* ── Header / hero ── */
+	#header .content {
+		padding: 32px 0 24px;
+		background: rgba(0, 0, 0, 0.45);
+		-webkit-backdrop-filter: blur(2px);
+		backdrop-filter: blur(2px);
+	}
+
+	.hero-title {
+		font-size: 2.8em;
+		letter-spacing: 3px;
+		color: #ffffff;
+		text-shadow: 0 0 16px rgba(var(--red-rgb), 0.9), 0 0 32px rgba(var(--red-rgb), 0.4);
+		margin-bottom: 0.2em;
+	}
+
+	#header .content p.hero-tagline {
+		font-size: 1em;
+		text-transform: none;
+		color: rgba(255, 255, 255, 0.75);
+		letter-spacing: 0.25em;
+		font-family: "Share Tech Mono", "Courier New", monospace;
+	}
+
+/* ── Article section headings (h2.major) ── */
+	#main article > h2.major {
+		font-size: 2.2em;
+		color: var(--red);
+		letter-spacing: 1px;
+		margin-bottom: 0.7em;
+	}
+
+/* ── About section ── */
+	.about-block {
+		padding: 24px 28px;
+		margin-bottom: 24px;
+	}
+
+	.about-block h3,
+	.about-block h4 {
+		color: var(--red);
+		margin-bottom: 10px;
+	}
+
+	.about-block .lead {
+		font-size: 1.1em;
+		margin-bottom: 18px;
+	}
+
+	.about-block ul {
+		margin-bottom: 0;
+	}
+
+	.about-block li {
+		color: #ffffff;
+	}
+
+	.about-block .accent {
+		color: var(--red);
+	}
+
+/* ── Resume blocks: trim trailing paragraph margins ── */
+	.resume-block > p:last-child {
+		margin-bottom: 0;
+	}
+
+	.resume-block > p.rv-project-blurb {
+		margin-bottom: 0.4em;
+	}
+
+	.rv-edu-item:last-child,
+	.rv-vol-item:last-child {
+		margin-bottom: 0;
+	}
+
+/* ── Projects section ── */
+	.project-block h4 {
+		color: var(--red);
+	}
+
+	.project-block .project-date-wrap {
+		margin-bottom: 0.2em;
+	}
+
+	.project-block .project-date {
+		color: #aaaaaa;
+	}
+
+/* ── Contact: social icon row ── */
+	#contact ul.icons {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		padding: 0;
+		list-style: none;
+	}
+
+	#contact ul.icons li a.icon {
+		font-size: 1.4em;
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+		display: inline-block;
+		text-align: center;
+	}
